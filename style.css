@@ -629,6 +629,7 @@ a {
   text-align: center;
   border-top: 2px solid var(--border-color);
   padding-top: 2rem;
+  scroll-margin-top: 80px; /* Account for fixed header */
 }
 
 .social-follow-text {
