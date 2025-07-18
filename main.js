@@ -846,7 +846,12 @@ navOverlay.addEventListener('click', () => {
 
 // Close nav when clicking a nav link on mobile
 navMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
+  link.addEventListener('click', (e) => {
+    // Update active state for navigation links
+    if (link.getAttribute('href').startsWith('#')) {
+      navMenu.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    }
     closeNav();
   });
 });
